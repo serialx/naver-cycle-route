@@ -1,0 +1,20 @@
+{
+  "name": "네이버 자전거 경로",
+  "version": "1.0",
+  "description": "네이버 자전거 경로를 사이클 컴퓨터에서 쓸 수 있는 파일로 만들어줍니다",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://beta.map.naver.com/*"],
+      "run_at": "document_start",
+      "js": ["naverMapsBeta.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "https://beta.map.naver.com/*"
+  ],
+  "web_accessible_resources": ["naverMapsBetaInjected.js"]
+}
