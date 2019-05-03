@@ -10,11 +10,17 @@
       "js": ["naverMapsBeta.js"]
     }
   ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "permissions": [
     "activeTab",
     "storage",
     "tabs",
     "https://beta.map.naver.com/*"
   ],
+  "page_action": {
+  },
   "web_accessible_resources": ["naverMapsBetaInjected.js"]
 }
